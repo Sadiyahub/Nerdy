@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Your Cart</h1>
+        <ul id="cartList" class="list-group mb-3"></ul>
+        <p><strong>Total: ₹<span id="totalPrice">0</span></strong></p>
+
+        <div class="text-center mt-4">
+            <a href="restaurant.html" class="btn btn-secondary">Back to Menu</a>
+            <button class="btn btn-primary" id="checkoutBtn">Checkout</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            function updateCart() {
+                $('#cartList').empty();
+                let totalPrice = 0;
+                cart.forEach(item => {
+                    $('#cartList').append(`<li class="list-group-item">${item.name} - ₹${item.price}</li>`);
+                    totalPrice += item.price;
+                });
+                $('#totalPrice').text(totalPrice);
+            }
+
+            $('#checkoutBtn').click(function() {
+                if (cart.length > 0) {
+                    window.location.href = 'checkout.html';
+                } else {
+                    alert("Your cart is empty!");
+                }
+            });
+
+            updateCart();
+        });
+    </script>
+</body>
+</html>
