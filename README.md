@@ -1,10 +1,10 @@
 [EatEazzy.pdf](https://github.com/user-attachments/files/20429488/EatEazzy.pdf)
 
-Fronted Backend Project on Online Restraunt by
-Sadiya Ahmed - 02
-Drisana Dash - 16
-Sriyansa Rout - 47
-Namrata Samatrai - 52
+Fronted Backend Project on Online Restraunt by:
+Sadiya Ahmed - 02;
+Drisana Dash - 16;
+Sriyansa Rout - 47;
+Namrata Samatrai - 52;
 
 
 # Eateazy 🍔📱
